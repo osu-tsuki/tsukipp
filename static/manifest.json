@@ -11,7 +11,7 @@
     "service_worker": "background.js"
   },
   "content_scripts": [{
-    "matches": ["*://osu.ppy.sh/*", "*://tsuki.host/*", "*://osu.tsuki.host/*"],
+    "matches": ["*://osu.ppy.sh/*", "*://osu.tsuki.host/*"],
     "js": ["content.js"]
   }],
   "action": {
