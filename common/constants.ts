@@ -1,0 +1,1 @@
+export const BEATMAP_URL_REGEX = /^https?:\/\/osu.(ppy.sh|tsuki.host)\/([bs]|beatmapsets)\/(\d+)\/?(#(osu|taiko|fruits|mania)\/(\d+))?/i

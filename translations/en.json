@@ -1,0 +1,22 @@
+{
+  "error-occured": "An error prevented the extension from working properly: ",
+  "version-update-message": "You are now using tsukirxpp! v{0}",
+  "changelog": "changelog",
+  "accuracy": "Accuracy",
+  "combo": "Combo",
+  "empty-fc": "(empty = FC)",
+  "misses": "Misses",
+  "mod-hidden": "Hidden",
+  "mod-hardrock": "HardRock",
+  "mod-doubletime": "DoubleTime",
+  "mod-flashlight": "Flashlight",
+  "mod-nofail": "NoFail",
+  "mod-easy": "Easy",
+  "mod-halftime": "HalfTime",
+  "mod-spunout": "SpunOut",
+  "language": "Language",
+  "settings": "Settings",
+  "result": "That's about {0}pp.",
+  "darkmode": "Enable darkmode",
+  "metadata-in-original-language": "Show beatmap metadata in original language"
+}

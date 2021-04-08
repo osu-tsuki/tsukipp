@@ -1,0 +1,49 @@
+{
+  "name": "tsukirxpp",
+  "version": "1.0.5",
+  "description": "Browser extension for calculating osu!Tsuki relax pp!",
+  "main": "popup/index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack --config webpack.config.js -w",
+    "start:chrome": "cross-env BUILD_CHROME=1 npm start",
+    "start:firefox": "cross-env BUILD_FF=1 npm start",
+    "build": "rm -rf build/ && cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "build:chrome": "cross-env BUILD_CHROME=1 npm run build && (cd build; zip -qr ../tsukirxpp-chrome.zip *) && rm -rf build/",
+    "build:firefox": "cross-env BUILD_FF=1 npm run build && (cd build; zip -qr ../tsukirxpp-firefox.zip *) && rm -rf build/",
+    "build:all": "rm -f tsukirxpp-chrome.zip tsukirxpp-firefox.zip && npm run build:chrome && npm run build:firefox",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atsumiosu/tsukirxpp.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/atsumiosu/tsukirxpp#readme",
+  "typings": "./typings.d.ts",
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "@types/chrome": "^0.0.133",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "copy-webpack-plugin": "^8.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.1.3",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-prettier": "^3.3.1",
+    "file-loader": "^6.2.0",
+    "material-design-icons": "^3.0.1",
+    "mini-css-extract-plugin": "^1.3.9",
+    "prettier": "^2.2.1",
+    "regenerator-runtime": "^0.13.7",
+    "rxpp": "1.0.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "ts-loader": "^8.0.18",
+    "typescript": "^4.2.3",
+    "webpack": "^5.27.0",
+    "webpack-cli": "^4.5.0"
+  }
+}

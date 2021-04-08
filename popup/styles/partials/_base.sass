@@ -1,0 +1,66 @@
+$darkmode-text: #eee
+
+*
+  margin: 0
+  padding: 0
+  outline: 0
+  color: inherit
+  box-sizing: border-box
+
+html
+  color: #222
+  font-size: 16px
+  font-family: 'Exo 2'
+  &.firefox
+    overflow: hidden
+
+  // Use Exo only for Vietnamese
+  &.lang-vi
+    font-family: 'Exo'
+
+body
+  background-color: #000
+  clear: both
+
+  background-image: url('/assets/background.png')
+  .darkmode &
+    background-image: url('/assets/background-darkmode.png')
+    color: $darkmode-text
+
+  font-family: inherit
+
+.firefox>body
+  overflow: hidden
+
+h1,h2,h3,h4
+  color: #f7f7f7
+  margin-bottom: 0.5em
+  font-weight: 700
+
+.clearfix
+  clear: both
+
+button
+  cursor: pointer
+
+.container
+  position: relative
+  width: 30em
+  opacity: 1
+  // For preloading
+  transition: 0.2s opacity ease-out
+  &.preloading
+    opacity: 0
+  &.error>*
+    filter: grayscale(1) blur(2px)
+  &.error>.error-message
+    filter: grayscale(0)
+
+.mode-taiko .disabled-taiko
+  display: none !important
+
+.mode-taiko-converted .disabled-taiko-converted
+  display: none !important
+
+.firefox .disabled-firefox
+  display: none !important

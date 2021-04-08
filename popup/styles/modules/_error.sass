@@ -1,0 +1,26 @@
+.error-message
+  display: none
+  position: relative
+  z-index: 3
+
+.error>.error-message
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  position: absolute
+  z-index: 4
+  height: 100%
+  width: 100%
+  background-image: url('/assets/button-bg.svg')
+  background-color: #b00
+  background-size: cover
+  transition: 0.2s all ease-out
+  color: #fff
+  font-weight: 600
+  font-size: 1.5em
+  padding: 2em
+
+  .frown
+    font-size: 4em
+    margin-bottom: 0.5em

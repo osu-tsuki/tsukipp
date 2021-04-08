@@ -1,0 +1,60 @@
+.settings
+  height: 100%
+  width: 100%
+  position: absolute
+  z-index: 4
+  transform: translateX(100%)
+  top: 0
+  transition: 0.5s all ease
+
+  background-image: url('/assets/background.png')
+  .darkmode &
+    background-image: url('/assets/background-darkmode.png')
+    color: $darkmode-text
+
+  padding: 1em
+  border-left: 8px solid #29b
+
+  #close-settings
+    position: absolute
+    top: 0
+    right: 0
+    padding: 0.8em 1em
+    border: 0
+    color: #444
+    .darkmode &
+      color: $darkmode-text
+    background: none
+    transition: all 0.1s ease-out
+    &:hover
+      color: #29b
+
+
+  h1
+    .darkmode &
+      color: #f7f7f7
+    color: #444
+    margin-bottom: 1em
+
+  .setting
+    margin-bottom: 1em
+    padding-bottom: 1em
+    border-bottom: 2px solid #ccc
+    display: flex
+    label
+      margin-right: 0.5em
+
+    input[type=checkbox]
+      position: relative
+      top: 0.1em
+
+    #language-selector
+      max-width: 200px
+      .darkmode &
+        color: #333
+
+  .changelog
+    color: #29b
+
+  &.open
+    transform: none
