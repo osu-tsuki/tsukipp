@@ -1,7 +1,7 @@
 {
-  "name": "tsukirxpp",
+  "name": "tsukipp",
   "version": "1.0.5",
-  "description": "Browser extension for calculating osu!Tsuki relax pp!",
+  "description": "Browser extension for calculating osu!Tsuki pp!",
   "main": "popup/index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack --config webpack.config.js -w",

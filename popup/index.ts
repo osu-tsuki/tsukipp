@@ -61,6 +61,8 @@ const keyModMap: { [key: string]: string } = {
   D: 'mod-dt',
   F: 'mod-hd',
   G: 'mod-fl',
+  Z: 'mod-rx',
+  X: 'mod-ap',
   C: 'mod-so',
 }
 
@@ -195,7 +197,7 @@ const trackCalculate = (() => {
 const trackCalculateDebounced = debounce(trackCalculate, 500)
 
 const getPPFromApi = async (opt: Array<any>) => {
-  let res = await axios.get(`https://tsuki.host/web/calculator/pp?b=${opt[0]}&m=${opt[1]}&c=${opt[2]}&nm=${opt[3]}&a=${opt[4]}&g=0`) 
+  let res = await axios.get(`https://tsuki.host/web/calculator/pp?b=${opt[0]}&m=${opt[1]}&c=${opt[2]}&nm=${opt[3]}&a=${opt[4]}&g=0`)
 
   return res.data
 }
@@ -218,12 +220,12 @@ const calculate = async () => {
         document.documentElement.classList.add('mode-standard')
         let stdResult = await getPPFromApi([
           pageInfo.beatmapId,
-          modifiers + 128,
+          modifiers,
           combo,
           misses,
           accuracy
         ])
-        pp = stdResult.pp[0]
+        pp = stdResult.pp[stdResult.pp.length - 1]
         stars = stdResult.stars
         arElement.innerText =
           cleanBeatmap.ar === undefined
@@ -298,6 +300,7 @@ const calculate = async () => {
 const opposingModifiers = [
   ['mod-hr', 'mod-ez'],
   ['mod-ht', 'mod-dt'],
+  ['mod-rx', 'mod-ap']
 ]
 
 const toggleOpposingModifiers = (mod: string) => {
