@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atsumiosu/tsukirxpp.git"
+    "url": "git+https://github.com/atsumiosu/tsukipp.git"
   },
   "license": "MIT",
-  "homepage": "https://github.com/atsumiosu/tsukirxpp#readme",
+  "homepage": "https://github.com/atsumiosu/tsukipp#readme",
   "typings": "./typings.d.ts",
   "devDependencies": {
     "axios": "^0.21.1",
