@@ -20,7 +20,6 @@ yarn
 
 All the changes made are compiled automatically as long as the `yarn start:chrome` script is running.
 
-To build a production version of the package, run `yarn build:chrome`.
 
 ### Firefox
 
@@ -30,16 +29,3 @@ To build a production version of the package, run `yarn build:chrome`.
  - The extension is now ready to go!
 
 All the changes made are compiled automatically as long as the `yarn start:firefox` script is running.
-
-To build a production version of the package, run `yarn build:firefox`.
-
-### Production builds
-
-Run `yarn build:all`. Two files, `tsukirxpp-chrome.zip` and `tsukirxpp-firefox.zip`, are generated.
-
-## Installing
-
-Chrome/Chromium: [Install from Google WebStore](https://chrome.google.com/webstore/detail/ezpp/aimihpobjpagjiakhcpijibnaafdniol)
-
-Firefox: [Install from addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/ezpp/)
-
